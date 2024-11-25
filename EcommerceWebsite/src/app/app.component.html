@@ -1,0 +1,247 @@
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+<!-- nav  start-->
+<header>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light nav-yellow  border-bottom border-top p-0">
+    <div class="container">
+      <a class="navbar-brand fs-4 fw-bold " routerLink="/products"><i class="bi bi-cart3 fs-4"
+          style="color: #f54242;"></i><span class="textBlur">EpicGameZone</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!--Toggle  -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Nav Items -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0  text-center ">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold text-uppercase  me-1 text-danger" href="#"
+              id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              home
+            </a>
+            <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item " routerLink="/products">Game Page</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle redHover fw-semibold text-uppercase text-black  me-1" href="#"
+              id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              pages
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">About Us</a></li>
+              <li><a class="dropdown-item" href="#">Cotact Us</a></li>
+              <li><a class="dropdown-item" href="#">Terms and Conditions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-uppercase text-black  me-1" href="#">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-uppercase text-black  me-1" routerLink="/login">Admin</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="searchDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-search fs-5" style="color: #0c0d0d;"></i>
+            </a>
+            <div class="dropdown-menu search-dropdown-menu p-2" style="min-width: 200px;">
+              <form class="d-flex" action="getAllProducts()" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search games" aria-label="Search"
+                  name="title">
+                <button class="btn btn-primary btn-sm" type="submit">Go</button>
+              </form>
+            </div>
+          </li>
+
+
+
+          <!-- cart -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-cart3 fs-5 me-1" style="color: #202122;"></i>
+            </a>
+            <ul class="dropdown-menu menuOnLeft   rounded-0 mt-2" aria-labelledby="navbarDropdown3">
+              <ng-container *ngIf="cartItems.length != 0">
+                <li class="p-2" *ngFor="let item of cartItems">
+                  <div class="d-flex w-100 border-bottom justify-content-evenly">
+                    <div>
+                      <img style="height: 70px !important;width: 100px !important;" class="img-fluid     p-2"
+                        [src]="item.game.imageURL" alt="">
+                    </div>
+                    <div style="">
+                      <a href="#" class="text-decoration-none text-black fw-semibold">
+                        <p class="m-0 p-0">{{item.game.title | slice:0:100}}</p>
+                      </a>
+                      <p> 1 <i class="fa-solid fa-xmark" style="color: #0d0d0d;"></i> $ {{item.game.price}}</p>
+                    </div>
+                    <button type="button" class="btn fs-5 closeBtn" (click)="removeItem(item.cartId)"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+
+                </li>
+                <li class="p-2">
+                  <div class=" w-100 ">
+                    <div class="d-flex justify-content-between">
+                      <h6>Total Items : </h6>
+                      <h6>{{cartItems.length}}</h6>
+                    </div>
+
+                  </div>
+
+                <li class="p-2">
+                  <div class=" w-100 ">
+                    <div class="d-flex justify-content-between">
+                      <h6>SubTotal :</h6>
+                      <h6>$ {{getSubtotal()}}</h6>
+                    </div>
+                    <div class="d-flex justify-content-evenly mt-2">
+                      <button class="btn btn-dark rounded-0 px-3"> View Cart</button>
+                      <a routerLink="/checkout"> <button class="btn btn-danger rounded-0 px-3">Checkout</button></a>
+                    </div>
+
+                  </div>
+                </li>
+              </ng-container>
+
+              <ng-container *ngIf="cartItems.length == 0">
+                <div class=" w-100 text-center">
+                  <h6>Your Cart Is Empty</h6>
+
+                </div>
+              </ng-container>
+
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle redHover fw-semibold text-uppercase text-black  me-1" href="#"
+              id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person fs-5 me-1" style="color: #202122;"></i>
+            </a>
+            <ul class="dropdown-menu" style="left:-50px" aria-labelledby="navbarDropdown">
+              <li *ngIf="!loggedObj.customerId">
+                <div class="d-flex justify-content-evenly mt-2">
+                  <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"> <button class="btn btn-danger rounded-0 px-3">Login</button></a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"> <button
+                      class="btn btn-danger rounded-0 px-3">Register</button></a>
+                </div>
+              </li>
+
+              <li *ngIf="loggedObj.customerId">
+                {{loggedObj.userName}}
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+<!-- login offcanvas -->
+<div class="offcanvas offcanvas-end m-5" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Sign In</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <section class="ftco-section">
+      <div class="container">
+
+        <div class="row ">
+          <div class="col-md-7 col-lg-12">
+            <div class="wrap">
+              <div class="img" style="background-image: url(images/bg-1.jpg);"></div>
+              <div class="login-wrap ">
+
+                <form action="#" class="signin-form">
+                  <div class="form-group mt-3">
+                    <input type="text" name="userName" [(ngModel)]="loginObj.userName" class="form-control" required>
+                    <label class="form-control-placeholder" for="username">Username</label>
+                  </div>
+                  <div class="form-group mt-4">
+                    <input id="password-field" name="password" [(ngModel)]="loginObj.password" type="password"
+                      class="form-control" required>
+                    <label class="form-control-placeholder" for="password">Password</label>
+                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                  </div>
+                  <div class="form-group">
+                    <button type="button" (click)="onLogin()"
+                      class=" my-4 form-control btn btn-primary rounded submit px-3">Sign
+                      In</button>
+                  </div>
+                  <div class="form-group d-md-flex">
+                    <div class="w-50 text-left">
+                      <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="w-50 text-md-right">
+                      <a href="#">Forgot Password</a>
+                    </div>
+                  </div>
+                </form>
+                <p class="text-center mt-4">Not a member? <a data-toggle="tab" href="#signup">Sign
+                    Up</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- register model -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 my-2">
+              <label for="">Set UserName</label>
+              <input type="text" [(ngModel)]="registerObj.userName" class="form-control">
+            </div>
+            <div class="col-12 my-2">
+              <label for="">Set Password</label>
+              <input type="password" [(ngModel)]="registerObj.password" class="form-control">
+            </div>
+            <div class="col-12 my-2">
+              <label for="">Set ConFirmPassword</label>
+              <input type="password" [(ngModel)]="registerObj.confirmPassword" class="form-control">
+            </div>
+            <div class="col-12 my-2">
+              <label for="">Set Email</label>
+              <input type="email" [(ngModel)]="registerObj.email" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="onRegister()">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

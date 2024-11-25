@@ -1,0 +1,53 @@
+.page {
+    color: white;
+    padding: 0 1rem;
+    background: #f1f5f9;
+}
+
+.page__box {
+    min-height: 120px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 36px;
+}
+
+.page__content {
+    min-height: calc(100vh - 178px);
+    border-radius: 10px;
+    margin-top: -2rem;
+    background: white;
+    color: black;
+    font-size: 2rem;
+}
+
+.page__content-data {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page__welcome {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.page__welcome h2 {
+    color: #007bff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.page__welcome p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.page__welcome p::before {
+    content: '👋';
+    font-size: 20px;
+    margin-right: 10px;
+}

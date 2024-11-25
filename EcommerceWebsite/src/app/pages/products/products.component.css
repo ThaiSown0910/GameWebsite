@@ -1,0 +1,12 @@
+.product-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+form input,
+form button {
+    display: block;
+    margin-bottom: 8px;
+}

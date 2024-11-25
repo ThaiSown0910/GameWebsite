@@ -1,0 +1,185 @@
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+<section id="product">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="productHeading text-center">
+                    <h2 class="mb-3">All Games</h2>
+
+                    <ul class="list-unstyled d-flex flex-md-row  justify-content-center ">
+                        <li *ngFor="let category of categories" (click)="getAllProductsByCategory(category.categoryId)">
+                            <a class=" m-4  text-decoration-none  fw-semibold"
+                                [ngClass]="selectedCategory == category.categoryId?'text-danger':'text-black'">{{category.categoryName}}</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row mt-3">
+                    <div class="col-lg-3 col-md-6" *ngFor="let game of productsArray">
+                        <div class="box-shadow">
+                            <div class="card mt-2">
+                                <!-- Hiển thị ảnh -->
+                                <img [src]="game.imageURL" class="card-img-top img-fluid" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ game.title }}</h5>
+                                    <p class="card-text">ID: {{ game.gameId }}</p>
+                                    <p class="card-text">Release Year: {{ game.year }}</p>
+                                    <p class="card-text">
+                                        <span class="text-danger fw-semibold me-2">${{game.price}}</span>
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <span><i class="bi bi-star-fill m-0" style="color: #f1f50f;"></i></span>
+                                            <span><i class="bi bi-star-fill m-0" style="color: #f1f50f;"></i></span>
+                                            <span><i class="bi bi-star-half m-0" style="color: #f1f50f;"></i></span>
+                                            <span class="text-muted">(2.5)</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-end pb-0 mb-0">
+                                                <button (click)="addtocart(game.gameId)"
+                                                    class="btn text-end btn-sm btn-success p-2">
+                                                    <i class="bi bi-cart-plus fs-5" style="color: #0c0d0d;"></i>
+                                                </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!--<div class="container">
+    <Tạo sản phẩm mới >
+    <h3>Create Product</h3>
+    <form (ngSubmit)="addProduct()">
+        <div class="form-group">
+            <label for="gameId">Game ID</label>
+            <input type="number" id="gameId" class="form-control" [(ngModel)]="newProduct.gameId" name="gameId"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control" [(ngModel)]="newProduct.title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input type="number" id="year" class="form-control" [(ngModel)]="newProduct.year" name="year" required>
+        </div>
+        <div class="form-group">
+            <label for="summary">Summary</label>
+            <textarea id="summary" class="form-control" [(ngModel)]="newProduct.summary" name="summary"
+                required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" class="form-control" [(ngModel)]="newProduct.categoryId" name="categoryid" required>
+                <option *ngFor="let category of categories" [value]="category.id">{{ category.categoryId }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" id="price" class="form-control" [(ngModel)]="newProduct.price" name="price" required>
+        </div>
+        <div class="form-group">
+            <label for="magebase64">Image Custom Name</label>
+            <input type="text" id="magebase64" class="form-control" [(ngModel)]="newProduct.imageBase64"
+                name="imagebase64" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input type="file" id="image" (change)="onFileSelected($event)" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+
+    <hr>
+
+    < Sửa sản phẩm >
+    <h3>Edit Product</h3>
+    <form (ngSubmit)="updateProduct()">
+        <div class="form-group">
+            <label for="editGameId">Game ID</label>
+            <input type="number" id="editGameId" class="form-control" [(ngModel)]="editProductData.gameId" name="gameId"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="editTitle">Title</label>
+            <input type="text" id="editTitle" class="form-control" [(ngModel)]="editProductData.title" name="title"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="editYear">Year</label>
+            <input type="number" id="editYear" class="form-control" [(ngModel)]="editProductData.year" name="year"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="editSummary">Summary</label>
+            <textarea id="editSummary" class="form-control" [(ngModel)]="editProductData.summary" name="summary"
+                required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="editCategory">Category</label>
+            <select id="editCategory" class="form-control" [(ngModel)]="editProductData.categoryId" name="categoryid"
+                required>
+                <option *ngFor="let category of categories" [value]="category.categoryId">{{ category.categoryId }}
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="editPrice">Price</label>
+            <input type="number" id="editPrice" class="form-control" [(ngModel)]="editProductData.price" name="price"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="magebase64">Image Custom Name</label>
+            <input type="text" id="magebase64" class="form-control" [(ngModel)]="newProduct.imageBase64"
+                name="imagebase64" required>
+        </div>
+        <div class="form-group">
+            <label for="editImage">Image</label>
+            <input type="file" id="editImage" (change)="onFileSelected($event)" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Update Product</button>
+    </form>
+
+    <hr>
+
+    < Danh sách sản phẩm >
+    <h3>Product List</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productsArray">
+                <td>{{ product.gameId }}</td>
+                <td>{{ product.title }}</td>
+                <td>{{ product.year }}</td>
+                <td>{{ product.categoryId }}</td>
+                <td>{{ product.price }}</td>
+                <td>
+                    <button class="btn btn-info" (click)="selectProductForEdit(product)">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteProduct(product.gameId)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<router-outlet></router-outlet>
