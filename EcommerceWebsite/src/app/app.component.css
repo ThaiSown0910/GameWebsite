@@ -175,3 +175,107 @@ body {
         text-align: center;
     }
 }
+
+/* Container tìm kiếm */
+.search-container {
+    margin-top: 50px;
+}
+
+.search-container form {
+    max-width: 600px;
+    width: 100%;
+}
+
+.search-container input {
+    border-radius: 30px;
+    padding-left: 15px;
+}
+
+.search-container button {
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+/* Kết quả tìm kiếm */
+.row {
+    margin-top: 30px;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+.card-text .text-muted {
+    font-size: 0.8rem;
+}
+
+.card-text .text-danger {
+    font-size: 1.1rem;
+}
+
+/* Xếp hạng sao */
+.row .col-6 i {
+    margin-right: 2px;
+}
+
+/* Nút thêm vào giỏ hàng */
+button.btn-success {
+    background-color: #28a745;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0;
+    border: none;
+}
+
+button.btn-success:hover {
+    background-color: #218838;
+}
+
+button.btn-success:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .search-container form {
+        max-width: 90%;
+    }
+
+    .row-cols-md-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .row-cols-1 {
+        grid-template-columns: 1fr;
+    }
+}

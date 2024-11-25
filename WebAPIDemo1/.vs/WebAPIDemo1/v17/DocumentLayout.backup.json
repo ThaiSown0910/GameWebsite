@@ -1,34 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\",
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\internship\\gitlab\\demo_apiweb\\webapidemo1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\internship\\gitlab\\demo_apiweb\\webapidemo1\\data\\gamedatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:data\\gamedatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\internship\\gitlab\\demo_apiweb\\webapidemo1\\migrations\\20241125022836_addemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:migrations\\20241125022836_addemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\internship\\gitlab\\demo_apiweb\\webapidemo1\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\gamewebsite\\webapidemo1\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\internship\\gitlab\\demo_apiweb\\webapidemo1\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\internship\\gitlab\\demo_apiweb\\webapidemo1\\data\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:data\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\internship\\gitlab\\demo_apiweb\\webapidemo1\\model\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:model\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\gamewebsite\\webapidemo1\\data\\gamedatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:data\\gamedatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,96 +42,33 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T02:43:38.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20241125022836_addEmail.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Migrations\\20241125022836_addEmail.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241125022836_addEmail.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Migrations\\20241125022836_addEmail.cs",
-              "RelativeToolTip": "Migrations\\20241125022836_addEmail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T02:28:36.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GamesController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Controllers\\GamesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GamesController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Controllers\\GamesController.cs",
-              "RelativeToolTip": "Controllers\\GamesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T01:54:51.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CheckoutController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Controllers\\CheckoutController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CheckoutController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Controllers\\CheckoutController.cs",
-              "RelativeToolTip": "Controllers\\CheckoutController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:56:21.15Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "GameDataContext.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Data\\GameDataContext.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Data\\GameDataContext.cs",
               "RelativeDocumentMoniker": "Data\\GameDataContext.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Data\\GameDataContext.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Data\\GameDataContext.cs",
               "RelativeToolTip": "Data\\GameDataContext.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAcwEcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:54:59.025Z"
+              "WhenOpened": "2024-11-25T08:15:58.848Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CheckoutDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Model\\CheckoutDTO.cs",
-              "RelativeDocumentMoniker": "Model\\CheckoutDTO.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Model\\CheckoutDTO.cs",
-              "RelativeToolTip": "Model\\CheckoutDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GamesController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Controllers\\GamesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GamesController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Controllers\\GamesController.cs",
+              "RelativeToolTip": "Controllers\\GamesController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAcwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:54:30.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Checkout.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Data\\Checkout.cs",
-              "RelativeDocumentMoniker": "Data\\Checkout.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\Data\\Checkout.cs",
-              "RelativeToolTip": "Data\\Checkout.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:54:26.582Z"
+              "WhenOpened": "2024-11-25T08:13:22.838Z",
+              "EditorCaption": ""
             }
           ]
         }

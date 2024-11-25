@@ -732,6 +732,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebAPIDemo1.Controllers.GamesController",
+    "Method": "SearchGamesByTitle",
+    "RelativePath": "api/Games/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "title",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebAPIDemo1.Model.GameDTO, WebAPIDemo1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ImageUploadController",
     "Method": "UploadImage",
     "RelativePath": "api/ImageUpload/upload",

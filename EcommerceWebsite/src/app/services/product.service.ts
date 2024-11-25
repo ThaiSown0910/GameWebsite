@@ -12,7 +12,7 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getAllProductsByTitle(title: string): Observable<any[]> {
-    return this.http.get<any[]>(`https://localhost:7279/api/Games?title=${title}`);
+    return this.http.get<any[]>(`https://localhost:7279/api/Games/search?title=${title}`);
   }
 
   getAllProducts(): Observable<any[]> {
@@ -65,6 +65,21 @@ export class ProductService {
 
   PlaceOrder(obj: any): Observable<any[]> {
     return this.http.post<any[]>("https://localhost:7279/api/Checkout", obj);
+  }
+
+
+  getAllCustomer(): Observable<any[]> {
+    return this.http.get<any[]>("https://localhost:7279/api/Register");
+  }
+
+  // Update an existing product by ID
+  updateCustomer(id: number, obj: any): Observable<any> {
+    return this.http.put<any>("https://localhost:7279/api/Register/" + id, obj);
+  }
+
+  // Delete a product by ID
+  deleteCustomer(id: number): Observable<any> {
+    return this.http.delete<any>("https://localhost:7279/api/Register/" + id);
   }
 
 }

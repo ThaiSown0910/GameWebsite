@@ -8,8 +8,8 @@ import { parseHostBindings } from '@angular/compiler';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
-
+  games: any[] = [];
+  searchTitle: string = '';
 
   title = 'EcommerceWebsite';
   registerObj: any = {
@@ -128,6 +128,43 @@ export class AppComponent {
 
   getSubtotal(): number {
     return this.cartItems.reduce((total, item) => total + item.game.price, 0);
+  }
+
+  searchGames(): void {
+    if (this.searchTitle) {
+      this.productSrv.getAllProductsByTitle(this.searchTitle).subscribe({
+        next: (games) => {
+          this.games = games;  // Lưu kết quả vào biến games
+        },
+        error: (err) => {
+          console.error('Error fetching games:', err);
+          this.games = [];
+        }
+      });
+
+    }
+  }
+
+
+  addtocart(gameId: number): void {
+    const cartItem = {
+      gameId: gameId,
+      customerId: this.loggedObj.customerId,
+      quantity: 1, // Default quantity
+      addedDate: new Date().toISOString() // ISO format ensures compatibility with most APIs
+    };
+
+    this.productSrv.addtoCart(cartItem).subscribe({
+      next: (response: any) => {
+        console.log('Item successfully added to cart:', response);
+        this.productSrv.cartUpdated.next(true); // Notify observers that the cart has been updated
+      },
+      error: (error: any) => {
+        console.error('Failed to add item to cart:', error);
+        // Optional: Show a user-friendly message
+        alert('An error occurred while adding the item to the cart. Please try again.');
+      }
+    });
   }
 
 }

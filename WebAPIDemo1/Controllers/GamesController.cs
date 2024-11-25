@@ -93,6 +93,53 @@ namespace WebAPIDemo1.Controllers
         }
 
 
+        // GET: api/Games/search?title=gameTitle
+        [HttpGet("search")]
+        public async Task<ActionResult<IEnumerable<GameDTO>>> SearchGamesByTitle(string title)
+        {
+            if (string.IsNullOrEmpty(title))
+            {
+                return BadRequest("Title parameter is required.");
+            }
+
+            // Use a regular variable instead of constant
+            string cacheKey = $"games_search_{title.ToLower()}";
+
+            // Check the cache before querying the database
+            var cachedGames = await _cacheService.GetCacheAsync(cacheKey);
+            if (cachedGames != null)
+            {
+                return Ok(JsonSerializer.Deserialize<IEnumerable<GameDTO>>(cachedGames));
+            }
+            // Use ToLower() to ensure case-insensitive search
+            var games = await _context.Games
+                                       .Where(m => m.title.ToLower().Contains(title.ToLower()))
+                                       .OrderBy(m => m.gameid)
+                                       .Select(m => new GameDTO
+                                       {
+                                           GameId = m.gameid,
+                                           Title = m.title,
+                                           Year = m.year,
+                                           Summary = m.summary,
+                                           CategoryId = m.categoryid,
+                                           Price = m.price,
+                                           ImageURL = m.imageurl
+                                       })
+                                       .ToListAsync();
+
+
+            if (games == null || !games.Any())
+            {
+                return NotFound($"No games found with title containing '{title}'.");
+            }
+
+            // Cache the result after querying the database
+            await _cacheService.SetCacheAsync(cacheKey, JsonSerializer.Serialize(games), TimeSpan.FromSeconds(120));
+
+            return Ok(games);
+        }
+
+
 
         // POST: api/Games
         [HttpPost]

@@ -20,6 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustmanageComponent } from './pages/custmanage/custmanage.component';
+
 
 
 
@@ -33,7 +35,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidenavComponent,
     HomeComponent,
     HeaderComponent,
-    LayoutComponent
+    LayoutComponent,
+    CustmanageComponent,
+
   ],
   imports: [
     BrowserModule,

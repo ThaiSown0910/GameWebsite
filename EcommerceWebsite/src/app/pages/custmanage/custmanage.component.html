@@ -1,0 +1,52 @@
+<div class="container">
+    <h2>Customers Management</h2>
+
+    <!-- Danh sách khách hàng -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <td>{{ customer.customerId }}</td>
+                <td>{{ customer.userName }}</td>
+                <td>{{ customer.email }}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="editCustomer(customer)">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteCustomer(customer.customerId)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Form thêm/sửa khách hàng -->
+    <div>
+        <h3>{{ isEditing ? 'Update Customer Account' : 'Add New Customer' }}</h3>
+        <div class="form-group">
+            <label for="userName">UserName:</label>
+            <input type="text" id="userName" class="form-control" [(ngModel)]="userName" />
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="form-control" [(ngModel)]="password" />
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">ConfirmPassword:</label>
+            <input type="password" id="confirmPassword" class="form-control" [(ngModel)]="confirmPassword" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control" [(ngModel)]="email" />
+        </div>
+
+        <button class="btn btn-success" (click)="saveCustomer()">
+            {{ isEditing ? 'Update' : 'Add' }}
+        </button>
+        <button class="btn btn-secondary" (click)="resetForm()">Reset</button>
+    </div>
+</div>

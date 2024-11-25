@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5Ufna/L5zcegyh+SzszHzNOlIbbHYdP42/lY9M2EIXA=",
+  "Hash": "eZZyEIGcUHLOTBbhrN3lgme8jkHc1Ve1ZE1jKbBrnU4=",
   "Source": "WebAPIDemo1",
   "BasePath": "_content/WebAPIDemo1",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "WebAPIDemo1\\wwwroot",
       "Source": "WebAPIDemo1",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Internship\\GitLab\\demo_apiweb\\WebAPIDemo1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\wwwroot\\",
       "BasePath": "_content/WebAPIDemo1",
       "Pattern": "**"
     }

@@ -6,6 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './pages/layout/layout.component';
+import { CustmanageComponent } from './pages/custmanage/custmanage.component';
 
 const routes: Routes = [
   {
@@ -38,7 +39,13 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent
+      },
+
+      {
+        path: 'custmanage',
+        component: CustmanageComponent
       }
+
     ]
   }
 
