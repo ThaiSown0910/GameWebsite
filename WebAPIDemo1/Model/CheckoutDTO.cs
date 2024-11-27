@@ -9,11 +9,11 @@
             public decimal TotalInvoiceAmount { get; set; }
             public decimal Discount { get; set; }
             public string PaymentNaration { get; set; }
-            public string DeliveryAddress1 { get; set; }
-            public string DeliveryAddress2 { get; set; }
+            public string PhoneNumber { get; set; }
+            public string DiscountCode { get; set; }
             public string DeliveryCity { get; set; }
             public string DeliveryPinCode { get; set; }
-            public string DeliveryLandMark { get; set; }
+            public string FullofName { get; set; }
         }
 
     

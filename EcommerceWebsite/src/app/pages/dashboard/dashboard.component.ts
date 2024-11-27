@@ -79,7 +79,7 @@ export class DashboardComponent implements OnInit {
       },
       (error) => {
         console.error('Error updating product', error);
-        alert('Error updating product');
+
       }
     );
   }

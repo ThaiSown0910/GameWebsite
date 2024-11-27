@@ -32,11 +32,11 @@ namespace WebAPIDemo1.Controllers
                     TotalInvoiceAmount = c.totalinvoiceamount,
                     Discount = c.discount,
                     PaymentNaration = c.paymentnaration,
-                    DeliveryAddress1 = c.deliveryaddress1,
-                    DeliveryAddress2 = c.deliveryaddress2,
+                    PhoneNumber = c.deliveryaddress1,
+                    DiscountCode = c.deliveryaddress2,
                     DeliveryCity = c.deliverycity,
                     DeliveryPinCode = c.deliverypincode,
-                    DeliveryLandMark = c.deliverylandmark
+                    FullofName = c.deliverylandmark
                 })
                 .ToListAsync();
 
@@ -65,11 +65,11 @@ namespace WebAPIDemo1.Controllers
                 TotalInvoiceAmount = checkout.totalinvoiceamount,
                 Discount = checkout.discount,
                 PaymentNaration = checkout.paymentnaration,
-                DeliveryAddress1 = checkout.deliveryaddress1,
-                DeliveryAddress2 = checkout.deliveryaddress2,
+                PhoneNumber = checkout.deliveryaddress1,
+                DiscountCode = checkout.deliveryaddress2,
                 DeliveryCity = checkout.deliverycity,
                 DeliveryPinCode = checkout.deliverypincode,
-                DeliveryLandMark = checkout.deliverylandmark
+                FullofName = checkout.deliverylandmark
             };
 
             return Ok(checkoutDTO);
@@ -86,11 +86,11 @@ namespace WebAPIDemo1.Controllers
                 totalinvoiceamount = checkoutDTO.TotalInvoiceAmount,
                 discount = checkoutDTO.Discount,
                 paymentnaration = checkoutDTO.PaymentNaration,
-                deliveryaddress1 = checkoutDTO.DeliveryAddress1,
-                deliveryaddress2 = checkoutDTO.DeliveryAddress2,
+                deliveryaddress1 = checkoutDTO.PhoneNumber,
+                deliveryaddress2 = checkoutDTO.DiscountCode,
                 deliverycity = checkoutDTO.DeliveryCity,
                 deliverypincode = checkoutDTO.DeliveryPinCode,
-                deliverylandmark = checkoutDTO.DeliveryLandMark
+                deliverylandmark = checkoutDTO.FullofName
             };
 
             _context.Checkouts.Add(checkout);
@@ -124,11 +124,11 @@ namespace WebAPIDemo1.Controllers
             checkout.totalinvoiceamount = checkoutDTO.TotalInvoiceAmount;
             checkout.discount = checkoutDTO.Discount;
             checkout.paymentnaration = checkoutDTO.PaymentNaration;
-            checkout.deliveryaddress1 = checkoutDTO.DeliveryAddress1;
-            checkout.deliveryaddress2 = checkoutDTO.DeliveryAddress2;
+            checkout.deliveryaddress1 = checkoutDTO.PhoneNumber;
+            checkout.deliveryaddress2 = checkoutDTO.DiscountCode;
             checkout.deliverycity = checkoutDTO.DeliveryCity;
             checkout.deliverypincode = checkoutDTO.DeliveryPinCode;
-            checkout.deliverylandmark = checkoutDTO.DeliveryLandMark;
+            checkout.deliverylandmark = checkoutDTO.FullofName;
 
             _context.Entry(checkout).State = EntityState.Modified;
 

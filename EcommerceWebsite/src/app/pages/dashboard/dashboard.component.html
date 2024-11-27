@@ -1,6 +1,36 @@
 <div class="container">
     <h1>Game Dashboard</h1>
 
+    <!-- Product List -->
+    <div class="product-list">
+        <h2>Product List</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Game ID</th>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{product.gameId}}</td>
+                    <td>{{ product.title }}</td>
+                    <td>{{ product.year }}</td>
+                    <td>{{ product.categoryId }}</td>
+                    <td>{{ product.price | currency }}</td>
+                    <td>
+                        <button class="btn btn-warning" (click)="selectProduct(product)">Edit</button>
+                        <button class="btn btn-danger" (click)="deleteProduct(product.gameId)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <!-- Add/Update Form -->
     <div class="form-container">
         <h2>{{ isEditing ? 'Edit Product' : 'Add Product' }}</h2>
@@ -43,33 +73,6 @@
         </form>
     </div>
 
-    <!-- Product List -->
-    <div class="product-list">
-        <h2>Product List</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Game ID</th>
-                    <th>Title</th>
-                    <th>Year</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let product of products">
-                    <td>{{product.gameId}}</td>
-                    <td>{{ product.title }}</td>
-                    <td>{{ product.year }}</td>
-                    <td>{{ product.categoryId }}</td>
-                    <td>{{ product.price | currency }}</td>
-                    <td>
-                        <button class="btn btn-warning" (click)="selectProduct(product)">Edit</button>
-                        <button class="btn btn-danger" (click)="deleteProduct(product.gameId)">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+
 </div>
+<router-outlet></router-outlet>

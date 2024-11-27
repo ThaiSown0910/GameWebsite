@@ -7,7 +7,7 @@ import { ProductService } from '../../services/product.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
+  searchTitle: string = '';
   productsArray: any[] = [];
   categories: any[] = [];
   selectedCategory: number = 0;
@@ -84,6 +84,22 @@ export class ProductsComponent implements OnInit {
         alert('An error occurred while adding the item to the cart. Please try again.');
       }
     });
+  }
+
+
+  searchGames(): void {
+    if (this.searchTitle) {
+      this.productSrv.getAllProductsByTitle(this.searchTitle).subscribe({
+        next: (games) => {
+          this.productsArray = games;  // Lưu kết quả vào biến games
+        },
+        error: (err) => {
+          console.error('Error fetching games:', err);
+          this.productsArray = [];
+        }
+      });
+
+    }
   }
 
 

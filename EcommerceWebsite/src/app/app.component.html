@@ -28,11 +28,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle redHover fw-semibold text-uppercase text-black  me-1" href="#"
               id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              pages
+              about us
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">About Us</a></li>
-              <li><a class="dropdown-item" href="#">Cotact Us</a></li>
               <li><a class="dropdown-item" href="#">Terms and Conditions</a></li>
             </ul>
           </li>
@@ -232,58 +230,5 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-<!-- game.component.html -->
-
-<!-- Thanh tìm kiếm ở giữa màn hình -->
-<div class="search-container d-flex justify-content-center align-items-center">
-  <form (ngSubmit)="searchGames()" class="d-flex w-50">
-    <input class="form-control me-2" type="search" placeholder="Search games" aria-label="Search"
-      [(ngModel)]="searchTitle" name="title" required>
-    <button class="btn btn-primary btn-sm" type="submit">Go</button>
-  </form>
-</div>
-
-<!-- Hiển thị kết quả tìm kiếm -->
-<div *ngIf="games.length > 0" class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-  <div *ngFor="let game of games" class="col">
-    <div class="card shadow-sm h-100">
-      <img [src]="game.imageURL" class="card-img-top img-fluid" alt="{{ game.title }}">
-      <div class="card-body">
-        <h5 class="card-title text-truncate" style="font-size: 1rem;">{{ game.title }}</h5>
-        <p class="card-text mb-1 text-muted">ID: {{ game.gameId }}</p>
-        <p class="card-text mb-2 text-muted">Release Year: {{ game.year }}</p>
-        <p class="card-text">
-          <span class="text-danger fw-semibold me-2">${{ game.price }}</span>
-        </p>
-        <div class="row g-0 align-items-center">
-          <div class="col-6">
-            <!-- Xếp hạng sao -->
-            <span><i class="bi bi-star-fill m-0" style="color: #f1f50f;"></i></span>
-            <span><i class="bi bi-star-fill m-0" style="color: #f1f50f;"></i></span>
-            <span><i class="bi bi-star-half m-0" style="color: #f1f50f;"></i></span>
-            <span class="text-muted">(2.5)</span>
-          </div>
-          <div class="col-6 text-end">
-            <!-- Nút thêm vào giỏ hàng -->
-            <button (click)="addtocart(game.gameId)" class="btn btn-sm btn-success">
-              <i class="bi bi-cart-plus fs-5"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Template nếu không có kết quả -->
-
-
-
-
 
 <router-outlet></router-outlet>

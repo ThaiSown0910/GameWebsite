@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\gamewebsite\\webapidemo1\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\gamewebsite\\webapidemo1\\model\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:model\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|c:\\users\\admin\\desktop\\gamewebsite\\webapidemo1\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A3E8ED2-BBD0-415A-9D94-141E2D298469}|WebAPIDemo1.csproj|solutionrelative:controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CheckoutController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Controllers\\CheckoutController.cs*",
+              "RelativeToolTip": "Controllers\\CheckoutController.cs*",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAowIIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T03:10:17.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CheckoutDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Model\\CheckoutDTO.cs",
+              "RelativeDocumentMoniker": "Model\\CheckoutDTO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Model\\CheckoutDTO.cs*",
+              "RelativeToolTip": "Model\\CheckoutDTO.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T03:09:26.881Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -46,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GameDataContext.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Data\\GameDataContext.cs",
               "RelativeDocumentMoniker": "Data\\GameDataContext.cs",
@@ -54,18 +88,17 @@
               "RelativeToolTip": "Data\\GameDataContext.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T08:15:58.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T08:15:58.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "GamesController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Controllers\\GamesController.cs",
               "RelativeDocumentMoniker": "Controllers\\GamesController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Desktop\\GameWebsite\\WebAPIDemo1\\Controllers\\GamesController.cs",
               "RelativeToolTip": "Controllers\\GamesController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAcwIwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAcwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T08:13:22.838Z",
               "EditorCaption": ""

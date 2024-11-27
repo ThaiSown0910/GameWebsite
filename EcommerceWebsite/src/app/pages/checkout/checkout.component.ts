@@ -18,11 +18,11 @@ export class CheckoutComponent implements OnInit {
     "totalInvoiceAmount": 0,
     "discount": 0,
     "paymentNaration": "",
-    "deliveryAddress1": "",
-    "deliveryAddress2": "",
+    "phoneNumber": "",
+    "discountCode": "",
     "deliveryCity": "",
     "deliveryPinCode": "",
-    "deliveryLandMark": ""
+    "fullofName": ""
   }
 
   constructor(private productSrv: ProductService) {
@@ -64,11 +64,11 @@ export class CheckoutComponent implements OnInit {
       totalInvoiceAmount: this.checkoutObj.totalInvoiceAmount,
       discount: this.checkoutObj.discount,
       paymentNaration: this.checkoutObj.paymentNaration,
-      deliveryAddress1: this.checkoutObj.deliveryAddress1,
-      deliveryAddress2: this.checkoutObj.deliveryAddress2,
+      phoneNumber: this.checkoutObj.phoneNumber,
+      discountCode: this.checkoutObj.discountCode,
       deliveryCity: this.checkoutObj.deliveryCity,
       deliveryPinCode: this.checkoutObj.deliveryPinCode,
-      deliveryLandMark: this.checkoutObj.deliveryLandMark
+      fullofName: this.checkoutObj.fullofName
     };
 
     this.productSrv.PlaceOrder(checkoutDTO).subscribe((res: any) => {

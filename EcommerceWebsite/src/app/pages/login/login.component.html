@@ -4,14 +4,13 @@
             <h2>Login</h2>
             <form action="#">
                 <div class="input-box">
-                    <input type="email" [(ngModel)]="loginAdminObj.userName" name="userName" required>
+                    <input type="text" [(ngModel)]="loginAdminObj.userName" name="userName" required>
                     <label>Username</label>
                 </div>
                 <div class="input-box">
                     <input type="password" [(ngModel)]="loginAdminObj.password" name="password" required>
                     <label>Password</label>
                 </div>
-
                 <button type="button" class="btn" (click)="onAdminLogin()">Login</button>
 
             </form>

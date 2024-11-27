@@ -132,3 +132,143 @@ button.btn-success:focus {
         margin: 5px 0;
     }
 }
+
+.search-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    /* Màu nền nhẹ */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng */
+    transition: transform 0.2s ease-in-out;
+}
+
+.search-container:hover {
+    transform: scale(1.02);
+    /* Phóng to nhẹ khi hover */
+}
+
+form input[type="search"] {
+    border: 2px solid #007bff;
+    /* Đường viền màu xanh */
+    border-radius: 20px;
+    /* Góc bo tròn */
+    padding: 10px 15px;
+    /* Khoảng cách trong */
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+form input[type="search"]:focus {
+    outline: none;
+    border-color: #0056b3;
+    /* Màu viền khi focus */
+    box-shadow: 0px 0px 5px #007bff;
+}
+
+form button {
+    border-radius: 20px;
+    /* Góc bo tròn */
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    /* Hiệu ứng gradient */
+    border: none;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    /* Đổi màu gradient khi hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    /* Hiệu ứng nổi lên */
+}
+
+form button:active {
+    transform: translateY(0);
+    /* Quay lại vị trí ban đầu khi click */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.footer {
+    background-color: #81c408;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #141313;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.email-link {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    color: #007bff;
+    /* Color when hovered */
+    text-decoration: underline;
+    /* Underline effect on hover */
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}

@@ -34,7 +34,8 @@ export class LoginComponent {
           alert("Login Success");
 
           // Điều hướng đến trang Dashboard trong LayoutComponent
-          this.router.navigateByUrl('/layout');
+          this.router.navigate(['http://localhost:4200/layout/dashboard']);
+
 
         } else {
           // Hiển thị thông báo lỗi nếu đăng nhập thất bại

@@ -29,7 +29,7 @@
         <h3>{{ isEditing ? 'Update Customer Account' : 'Add New Customer' }}</h3>
         <div class="form-group">
             <label for="userName">UserName:</label>
-            <input type="text" id="userName" class="form-control" [(ngModel)]="userName" />
+            <input type="text" id="userName" class="form-control" [(ngModel)]="userName" [disabled]="isEditing" />
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
@@ -50,3 +50,4 @@
         <button class="btn btn-secondary" (click)="resetForm()">Reset</button>
     </div>
 </div>
+<router-outlet></router-outlet>
