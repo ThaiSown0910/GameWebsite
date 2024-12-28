@@ -155,13 +155,15 @@
 
                 <form action="#" class="signin-form">
                   <div class="form-group mt-3">
-                    <input type="text" name="userName" [(ngModel)]="loginObj.userName" class="form-control" required>
                     <label class="form-control-placeholder" for="username">Username</label>
+                    <input type="text" name="userName" [(ngModel)]="loginObj.userName" class="form-control" required>
+
                   </div>
                   <div class="form-group mt-4">
+                    <label class="form-control-placeholder" for="password">Password</label>
                     <input id="password-field" name="password" [(ngModel)]="loginObj.password" type="password"
                       class="form-control" required>
-                    <label class="form-control-placeholder" for="password">Password</label>
+
                     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                   </div>
                   <div class="form-group">
@@ -205,19 +207,19 @@
         <div class="container">
           <div class="row">
             <div class="col-12 my-2">
-              <label for="">Set UserName</label>
+              <label for="">Username</label>
               <input type="text" [(ngModel)]="registerObj.userName" class="form-control">
             </div>
             <div class="col-12 my-2">
-              <label for="">Set Password</label>
+              <label for="">Password</label>
               <input type="password" [(ngModel)]="registerObj.password" class="form-control">
             </div>
             <div class="col-12 my-2">
-              <label for="">Set ConFirmPassword</label>
+              <label for="">Confirm Password</label>
               <input type="password" [(ngModel)]="registerObj.confirmPassword" class="form-control">
             </div>
             <div class="col-12 my-2">
-              <label for="">Set Email</label>
+              <label for="">Email</label>
               <input type="email" [(ngModel)]="registerObj.email" class="form-control">
             </div>
           </div>
